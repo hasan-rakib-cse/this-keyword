@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Changing the value of object property</h1>
+
+    <script>
+        
+        const person = {
+            firstName: "John",
+            lastName: "Doe",
+            salary: 1000,
+            chargeBill: function(amount) {
+                this.salary = this.salary - amount;
+                return this.salary;
+            }
+        };
+        const x = person.salary;
+        console.log('object salary value: ' + x)
+        const y = person.chargeBill(100);
+        console.log('after bill remaining salary is: ' + y)
+        const z = person.salary
+        console.log('object salary value: ' + z)
+        // output: 
+        // object salary value: 1000
+        // after bill remaining salary is: 900
+        // object salary value: 900
+
+    </script>
+</body>
+</html>
