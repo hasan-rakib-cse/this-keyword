@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>How to determine this</h1>
+    <p>In case of JavaScript, <b>this</b> refers to that context in which a function/ method running in.</p>
+    <p>That means when we call a method/ function, the property (object) that stands in the calling method's left side before <b>dot</b>,</p>
+    <p>is the value of <b>this</b>.</p>
+    <script>
+        
+        const myObj = {
+            name: 'Kuddus Ali',
+            getFullName: function() {
+                return 'Mr. ' + this.name;
+            }
+        }
+        
+        const anotherObj = {
+        name: 'Biddut Ali'
+        }
+
+        anotherObj.getFullName = myObj.getFullName;
+        // myObj er getFullName() function ta anotherObj er getFullName() e assign hoea gese
+        console.log(anotherObj.getFullName);
+        console.log(myObj.getFullName()); // output: Mr. Kuddus Ali
+        console.log(anotherObj.getFullName()) // output: Mr. Biddut Ali
+
+
+    </script>
+</body>
+</html>
