@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Method access with another method / function from an object</h1>
+
+    <script>
+        
+        const person = {
+        firstName: "John",
+        lastName: "Duck",
+        id: 5566,
+        fullName : function() {
+            return this.firstName + " " + this.lastName;
+        },
+        callMethod: function() {
+            return this.fullName();
+        }
+        };
+        const x = person.callMethod();
+        console.log(x)
+        // output: John Duck
+
+    </script>
+</body>
+</html>
