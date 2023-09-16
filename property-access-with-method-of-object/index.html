@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Property access with the method / function of an object</h1>
+
+    <script>
+        
+        const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName : function() {
+            return this.firstName + " " + this.lastName;
+        }
+        };
+        const x = person.fullName();
+        console.log(x)
+        // output: John Doe
+
+    </script>
+</body>
+</html>
